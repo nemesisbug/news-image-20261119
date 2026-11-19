@@ -1,5 +1,11 @@
 # The World Today — 19 November 2026
 
+[![make.fun · news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![rank](https://make.fun/badge/news-image-20261119/nemesisbug/news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![reward](https://make.fun/badge/news-image-20261119/nemesisbug/news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+
+Entry for [make.fun's "Sum up 19 November's world news in one image"](https://make.fun/bounty/news-image-20261119) bounty ($250 in USDC, top 50 paid).
+
 A one-page newspaper front page that sums up the world's news of
 **Thursday 19 November 2026** in a single image. Every story on the page
 happened, or was first reported, on that day.
@@ -43,3 +49,7 @@ Tower, CNBC, The Hindu.
 ## Licence
 
 MIT — see `LICENSE`.
+
+## Referral
+
+https://make.fun/?ref=w642jqgx&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119
