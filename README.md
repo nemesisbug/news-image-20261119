@@ -16,11 +16,11 @@ happened, or was first reported, on that day.
   Hague, the first-ever Trump–Xi–Putin trilateral in Shenzhen, Cyclone
   Akvan bearing down on India's east coast, and the Coalition of the
   Willing meeting in Berlin.
-- **Fifteen more stories** in three columns — Voyager 1 crossing one
-  light-day, India–Japan 2+2 talks in Tokyo, Russian oil refining down
-  45%, Bitcoin, Asian markets, oil, the US House Democratic Caucus chair
-  election, Spain's general strike, a drug seizure in Libya, a new
-  Knesset speaker, the Women's Champions League, and more.
+- **Twelve more stories** in three columns — Voyager 1's confirmation a
+  light-day out, India–Japan 2+2 talks in Tokyo, Bitcoin, the Nikkei's
+  open, oil, South Korea's exam-day market delay, the Women's Champions
+  League, Ondo's Anthropic tracker, cricket in Nepal and Abu Dhabi, and
+  two more from launch day itself.
 - **By the numbers** — the day's figures at a glance, and a sources line.
 
 ## How it is made

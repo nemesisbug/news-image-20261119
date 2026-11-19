@@ -68,60 +68,54 @@ def text_block(draw, x, y, lines, fnt, fill, leading):
 # (number, lon, lat, headline for the legend, label offset dx, dy)
 LEADS = [
     (1, -80.2, 25.8, "GTA VI opens worldwide",
-     "Midnight launch, 99 on Metacritic", 14, 4),
+     "Midnight launch; critics score it 99", 14, 4),
     (2, -74.0, 40.7, "Anthropic lists on Nasdaq",
-     "$83 a share, ticker ANT", 14, -16),
-    (3, 4.3, 52.1, "ICJ delivers Myanmar judgment",
-     "The Hague, seven years on", 14, 4),
-    (4, 114.1, 22.5, "Trump, Xi and Putin meet",
+     "Debuts today; priced $83 Wednesday", 14, -16),
+    (3, 4.3, 52.1, "ICJ to deliver Myanmar judgment",
+     "Due today, 10:00 The Hague", 14, 4),
+    (4, 113.8, 22.6, "Trump, Xi and Putin due to meet",
      "First trilateral, in Shenzhen", -14, 4),
-    (5, 86.0, 19.8, "Cyclone Akvan nears India",
+    (5, 88.0, 17.0, "Cyclone Akvan nears India",
      "Landfall due Friday noon", -14, -16),
     (6, 13.4, 52.5, "Coalition of the Willing",
-     "Allies meet in Berlin on Ukraine", 14, -16),
+     "Meets in Berlin today on Ukraine", 14, -16),
 ]
 
 # --- the shorter stories, three columns ------------------------------------
 # (tag, colour, headline, one-line summary)
 STORIES = [
-    ("SPACE", TEAL, "Voyager 1 crosses one light-day",
-     "NASA confirms today the 1977 probe is now a light-day from Earth, the farthest human-made object."),
+    ("SPACE", TEAL, "Voyager 1 confirmed one light-day away",
+     "NASA confirms today the probe crossed the mark on Wednesday — the farthest human-made object."),
     ("DIPLOMACY", NAVY, "India and Japan hold 2+2 talks",
      "Defence and foreign ministers meet in Tokyo to deepen security ties."),
-    ("UKRAINE", RED, "Russian refining down 45%",
-     "Drone strikes have hit 15 of Russia's 35 largest refineries."),
-    ("MARKETS", GOLD, "Bitcoin slips to about $63,000",
-     "Crypto falls 2.7% on the day as risk appetite fades."),
-    ("MARKETS", GOLD, "Asian shares open lower",
-     "Nikkei seen 0.5% lower at the open, Hang Seng 1.7% lower."),
-    ("ENERGY", GOLD, "Oil falls to $83 a barrel",
-     "WTI crude drops 3.2% to $83.26 as risk aversion rises."),
-    ("USA", NAVY, "Liu Yunping wins House party post",
-     "First Taiwanese American to chair the House Democratic Caucus."),
-    ("EUROPE", RED, "Spain strike turns violent",
-     "Police clash with protesters as a general strike halts cities."),
-    ("AFRICA", TEAL, "Libya seizes cocaine and pills",
-     "Millions of pills and cocaine seized in the east, officials say."),
-    ("MIDEAST", NAVY, "Knesset picks new speaker",
-     "Matan Kahana voted in as speaker of Israel's parliament."),
+    ("MARKETS", GOLD, "Bitcoin holds near $63,000",
+     "The token trades around $63,000 in early Thursday trading."),
+    ("MARKETS", GOLD, "Nikkei opens higher",
+     "Tokyo's Nikkei 225 opens up 0.36% at 59,238, led higher by SoftBank."),
+    ("ENERGY", GOLD, "Oil steadies near $82",
+     "WTI crude holds around $82 a barrel in early Thursday trading."),
+    ("ASIA", NAVY, "Korea delays market open for exam",
+     "Seoul pushes trading back an hour so students can sit the college entrance exam in quiet."),
     ("SPORT", TEAL, "Women's Champions League tonight",
      "Arsenal host Lyon and Barcelona face Servette in matchday five."),
-    ("INDIA", RED, "Panel to reshape sports leagues",
-     "Sports ministry names a 14-member committee to professionalise leagues."),
-    ("INDIA", RED, "Reporters hit back at police",
-     "Independent journalists challenge Delhi Police's affidavit to the Supreme Court."),
-    ("TECH", NAVY, "Tokenised Anthropic shares go live",
-     "Ondo launches its ANTon token as ANT starts trading on Nasdaq."),
-    ("GAMES", RED, "GTA VI has no PC date",
-     "Rockstar announces no PC version or release date for now."),
+    ("TECH", NAVY, "Anthropic tracker to launch today",
+     "Ondo's ANTon token goes live for non-US investors — exposure to ANT, not shares."),
+    ("SPORT", TEAL, "Nepal league semi-final today",
+     "Sudurpaschim Royals meet Chitwan Rhinos for a place in the final."),
+    ("SPORT", TEAL, "Abu Dhabi T10 reaches climax",
+     "Three matches at Sheikh Zayed Stadium as the league nears its final."),
+    ("GAMES", RED, "Britain calls in sick for GTA VI",
+     "2.8m UK adults set to play on launch day; broadband firms brace for record downloads."),
+    ("GAMES", RED, "No PC version announced",
+     "Rockstar lists PlayStation 5 and Xbox only — no PC date for now."),
 ]
 
 NUMBERS = [
     ("99", "GTA VI Metacritic score, tying the all-time high"),
     ("$1.65bn", "Estimated GTA VI pre-sales (Sensor Tower)"),
-    ("$83", "Anthropic IPO price per share"),
-    ("45%", "Russian refining hit by drone strikes"),
-    ("~$63,000", "Bitcoin on Thursday"),
+    ("$83", "Anthropic IPO price, set Wednesday"),
+    ("$82", "WTI crude in early Thursday trading"),
+    ("~$63,000", "Bitcoin in early Thursday trading"),
     ("1 light-day", "Voyager 1's distance from Earth"),
 ]
 
@@ -238,10 +232,10 @@ def draw_map(d):
         x, y = project(lon, lat)
         lx, ly = x + dx, y + dy
         d.line([(x, y), (lx, ly)], fill=RED, width=1)
-        d.ellipse([x - 9, y - 9, x + 9, y + 9], fill=RED, outline=WHITE, width=1)
+        d.ellipse([x - 8, y - 8, x + 8, y + 8], fill=RED, outline=WHITE, width=1)
         s = str(num)
         nw = d.textlength(s, font=f_pin)
-        d.text((x - nw / 2, y - 7.5), s, font=f_pin, fill=WHITE)
+        d.text((x - nw / 2, y - 7), s, font=f_pin, fill=WHITE)
 
 
 def draw_hero_art(d, x0, y0, x1, y1):
@@ -308,7 +302,7 @@ def draw_masthead(d):
     right = "ONE DAY · ONE IMAGE"
     rw = d.textlength(right, font=f_small)
     d.text((996 - rw, 106), right, font=f_small, fill=RED)
-    tag = "The whole world, in one picture — every story below happened, or was first reported, today."
+    tag = "The whole world, in one picture — the news of today, as it stands this morning."
     tw = d.textlength(tag, font=f_tag)
     d.text(((W - tw) / 2, 126), tag, font=f_tag, fill=MUTED)
 
@@ -328,11 +322,11 @@ def draw_hero(d):
     y = text_block(d, tx, y, wrap(d, "After 13 years, Grand Theft Auto VI begins its worldwide rollout.",
                           f_dek, 996 - tx, 1), f_dek, MUTED, 20)
     y += 6
-    y = text_block(d, tx, y, wrap(d, "Rockstar's epic scores 99 on Metacritic, tying the "
-                          "highest mark ever, as pre-sales pass an estimated $1.65 billion. "
-                          "Take-Two shares jump 7.5%.",
+    y = text_block(d, tx, y, wrap(d, "Reviews out Wednesday score it 99 on Metacritic, "
+                          "tying the all-time high, as pre-sales pass an estimated "
+                          "$1.65 billion. Take-Two rose 7.5% on Wednesday.",
                           f_body, 996 - tx, 2), f_body, INK, 17)
-    y = ay1 - 24
+    y = 318
     f_chip = font(SANS_B, 11)
     chips = ["99 METACRITIC", "17.1M COPIES", "$1.65BN PRE-SALES"]
     cx = tx
@@ -375,7 +369,7 @@ def draw_columns(d):
     f_tag = font(SANS_B, 11)
     f_head = font(SANS_B, 15)
     f_sum = font(SANS, 12)
-    per_col = 5
+    per_col = 4
     slot = (bottom - top) / per_col
     for ci in range(3):
         x = col_x[ci]
@@ -388,10 +382,6 @@ def draw_columns(d):
                            f_head, INK, 18)
             y = text_block(d, x, y, wrap(d, summ, f_sum, col_w, 2),
                            f_sum, MUTED, 15)
-            if ri < per_col - 1:
-                d.line([(x, top + (ri + 1) * slot - 8),
-                        (x + col_w, top + (ri + 1) * slot - 8)],
-                       fill=RULE, width=1)
     d.line([(28, 880), (996, 880)], fill=INK, width=2)
 
 
@@ -418,7 +408,7 @@ def draw_footer(d):
     line = ("Sources: Reuters · AP · BBC · Nasdaq · India Meteorological Department · "
             "NASA · Sensor Tower · CNBC · The Hindu")
     d.text((28, 974), line, font=f_f, fill=MUTED)
-    d.text((28, 990), "All stories happened, or were first reported, on Thursday 19 November 2026.",
+    d.text((28, 990), "All stories are from Thursday 19 November 2026.",
            font=f_f, fill=MUTED)
 
 
